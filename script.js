@@ -28,7 +28,7 @@ function colorChange(event) {
     elemClass = event.target.classList
     if (elemClass != "container") {
         let elem = document.querySelector(`.${elemClass}`)
-        elem.style.backgroundColor = "red";
+        elem.style.backgroundColor = randomColorGenerator();
     }
 }
 function setGrid(bool) {
@@ -44,6 +44,12 @@ function setGrid(bool) {
     else{
         gridMaker(16);
     }
+}
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function randomColorGenerator(){
+    return `rgb( ${getRandomInt(0,255)} , ${getRandomInt(0,255)},${getRandomInt(0,255)} )`
 }
 setGrid(false)
 container.addEventListener("mouseover", colorChange)
