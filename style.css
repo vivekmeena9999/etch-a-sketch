@@ -1,9 +1,17 @@
 .container{
     border: 5px solid black;
-    height: 500px;
-    width: 500px;
+    height: 650px;
+    width: 650px;
     display: flex;
     flex-wrap: wrap;
     margin: 90px auto;
     
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    padding: 5px;
 }
